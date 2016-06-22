@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.1
+  - 2.2.3
+before_install:
+  - gem install bundler
+  - bundle --version
+script:
+  - bundle exec rake spec
+gemfile:
+  - gemfiles/rails_30.gemfile
+  - gemfiles/rails_31.gemfile
+cache:
+  bundler: true
